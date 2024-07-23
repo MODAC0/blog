@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
     "@notionhq/client": "^2.2.15",
     "next": "14.2.5",
     "notion-client": "^6.16.0",

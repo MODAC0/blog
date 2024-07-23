@@ -24,7 +24,19 @@
     "paths": {
       "@/*": [
         "./*"
-      ]
+      ],
+      "@components/*": [
+        "./components/*"
+      ],
+      "@css/*": [
+        "./css/*"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@lib/*": [
+        "./lib/*"
+      ],
     }
   },
   "include": [

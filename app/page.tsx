@@ -1,4 +1,4 @@
-import { notionDatabase } from '@/lib/notion';
+import { notionDatabase } from '@lib/notion';
 
 export default async function Home() {
   let db;
@@ -15,5 +15,5 @@ export default async function Home() {
     return <main>에러가 발생했습니다.</main>;
   }
 
-  return <main></main>;
+  return <main>gdgd</main>;
 }
