@@ -1,19 +1,19 @@
-import { notionDatabase } from '@lib/notion';
+import Renderer from "@/components/Renderer";
+import { getData } from "@/lib/notion";
 
-export default async function Home() {
-  let db;
+import 'react-notion-x/src/styles.css';
+import 'prismjs/themes/prism-tomorrow.css';
+import 'katex/dist/katex.min.css';
 
-  try {
-    if (!process.env.NOTION_DATABASE_ID) {
-      throw new Error('데이터베이스 아이디가 없습니다.');
-    }
-    db = await notionDatabase.databases.query({
-      database_id: process.env.NOTION_DATABASE_ID,
-    });
-  } catch (error) {
-    console.error(error);
-    return <main>에러가 발생했습니다.</main>;
-  }
+const pageId = '67baad74b5144269a51b1ecbd0c95b4b';
 
-  return <main>gdgd</main>;
-}
+const About = async () => {
+  const data = await getData(pageId);
+  console.log(data);
+
+  return <main>
+    <Renderer recordMap={data} rootPageId={pageId} />
+  </main>;
+};
+
+export default About;
